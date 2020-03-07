@@ -21,7 +21,7 @@ h2,h3 {
 
 hr {
   width: 50%;
-  border: 1px solid #222;
+  border: 1px solid #333;
   margin: 0px;
 }
 
@@ -30,24 +30,24 @@ hr {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .hero_title {
-  font-size: 100px;
+  font-size: 6em;
   font-family: 'Saira Condensed', serif;
 }
 
 .hero_h1 {
   margin-top: 10px;
-  font-size: 22px;
+  font-size: 1.4em;
   font-family: 'Inter', sans-serif;
   line-height: 3;
 }
 
 .hero_h2 {
-  font-size: 16px;
+  font-size: 1.1em;
   font-family: 'Inter', sans-serif;
   line-height: 2;
 }
@@ -60,8 +60,8 @@ hr {
 }
 
 .footer_content {
-  margin-right: 40px;
-  margin-bottom: 30px;
+  margin-right: 60px;
+  margin-bottom: 40px;
   text-align: right;
 }
 
@@ -71,14 +71,16 @@ hr {
   border: 1px solid white;
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.7em;
   font-family: 'Inter', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 5px 5px 5px 5px;
+  border-color: #333;
   background-color: #0b0b0b;
 }
 
+/*
 .row {
     clear: both;
     max-width: 1040px;
@@ -108,3 +110,4 @@ hr {
 .col-10 { width: 82.6923076923% }
 .col-11 { width: 91.3461538462% }
 .col-12 { width: 100%; margin: 0 }
+*/
