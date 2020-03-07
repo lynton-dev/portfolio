@@ -46,7 +46,7 @@ hr {
 
 @media only screen and (max-width: 800px) {
   .hero_div {
-    height: 600px;
+    height: 400px;
     display: flex;
     justify-content: center;
     flex-direction: column;
