@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lora&family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <!-- Hero -->
-    <div class="hero_div">
-      <div class="hero_title">LYNTON SCHOEMAN</div>
-      <hr>
-      <div class="hero_h1">Hello, I am a software engineer and creative.</div>
-      <div class="hero_h2">I develop <span style="color:#42efa4;font-weight:bold">mobile apps</span> and <span style="color:#42efa4;font-weight:bold">websites</span>.</div>
-      </div>
-
-    <div class="hero_footer">
-      <a href="mailto:info@lynton.dev" class="button" id="contact_button">CONTACT</a>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lora&family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
+  <link href="https://css.gg/c?=|coffe|mail" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  
+  <!-- Velocity.js -->
+  <script src="https://raw.githubusercontent.com/julianshapiro/velocity/master/velocity.min.js"></script>
+</head>
+<body>
+  <div class="topnav">
+    <a id="topnav_logo" href="#" onclick="more()"><i class="gg-coffe"></i></a>
+    <a id="topnav_mail" href="mailto:info@lynton.dev"><i class="gg-mail"></i></a>
+  </div>
+  
+  <div class="hero_main" id="hero_main">
+  <!-- Hero -->
+  <div class="hero_div" id="hero_div">
+    <div class="hero_title">LYNTON SCHOEMAN</div>
+    <hr>
+    <div class="hero_h1">Hello, I am a software engineer and creative.</div>
+    <div class="hero_h2">I develop <span style="color:#42efa4;font-weight:bold">mobile apps</span> and <span style="color:#42efa4;font-weight:bold">websites</span>.</div>
     </div>
-    
+  </div>
+  
+  
     <!-- Main content -->
-    <!--<div class="row">
-      <div class="col-5">Content spans five columns Content spans five columns</div>
-      <div class="col-7">Content spans seven columns Content spans seven columns</div>
-    </div>-->
-
-  </body>
+  <div class="main_content" id="main_content">
+    <div class="row">
+      <!--<div class="col-5">Content spans five columns Content spans five columns</div>
+      <div class="col-7">Content spans seven columns Content spans seven columns</div>-->
+    </div>
+  </div>
+  
+  <div class="hero_footer" id="hero_footer">
+        <a onclick="more()" id="more_button" class="button">Latest Works</a>
+  </div>
+  
+</body>
 </html>
