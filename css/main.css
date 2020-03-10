@@ -9,6 +9,36 @@ body {
   background-color: #0b0b0b;
 }
 
+.topnav {
+  background-color: #0b0b0b;
+  overflow: hidden;
+  min-height: 64px;
+  width: 100%;
+  position: relative;
+}
+
+#topnav_logo {
+  color: #eee;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 60px;
+}
+
+#topnav_mail {
+  color: #eee;
+  text-align: right;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 hr {
   width: 45%;
   border: 1px solid #2b2b2b;
@@ -77,12 +107,12 @@ hr {
   bottom: 0;
   height: 80px;
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 
 .button {
   padding: 14px 40px;
-  border: 1px solid white;
+  border: 1px solid #3b3b3b;
   color: white;
   text-decoration: none;
   font-size: 0.7em;
@@ -90,8 +120,6 @@ hr {
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 4px;
-  border-color: #333;
-  margin-right: 5%;
   background: #0b0b0b;
   color: #eee;
   transition: .6s;
@@ -114,7 +142,16 @@ hr {
   transition: .7s;
 }
 
-/*
+#more_button {
+  vertical-align: bottom;
+  margin-bottom:40px;
+}
+
+.main_content {
+  opacity: 0;
+  display: none;
+}
+
 .row {
     clear: both;
     max-width: 1040px;
@@ -144,4 +181,3 @@ hr {
 .col-10 { width: 82.6923076923% }
 .col-11 { width: 91.3461538462% }
 .col-12 { width: 100%; margin: 0 }
-*/
