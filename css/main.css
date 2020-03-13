@@ -172,11 +172,15 @@ hr {
   width: 250px;
   object-fit: cover;
   overflow: hidden;
-}
-
-.thumb {
   -webkit-transition: 0.3s ease;
   transition: transform .3s ease;
+}
+
+@media only screen and (max-width: 800px) {
+  .thumb {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 .thumb:hover {
