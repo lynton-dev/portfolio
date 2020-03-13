@@ -172,8 +172,8 @@ hr {
   width: 250px;
   object-fit: cover;
   overflow: hidden;
-  -webkit-transition: 0.3s ease;
-  transition: transform .3s ease;
+  /*-webkit-transition: 0.3s ease;
+  transition: transform .3s ease;*/
 }
 
 @media only screen and (max-width: 800px) {
@@ -190,10 +190,10 @@ hr {
   }
 }
 
-.thumb:hover {
+/*.thumb:hover {
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
-}
+}*/
 
 .left-thumb {
   text-align: right;
