@@ -28,6 +28,7 @@ body {
   transform: translateY(-50%);
   left: 60px;
   display: none;
+  cursor:pointer;
 }
 
 #topnav_mail {
@@ -39,6 +40,7 @@ body {
   right: 60px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  cursor:pointer;
 }
 
 hr {
