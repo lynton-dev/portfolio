@@ -9,6 +9,14 @@ body {
   background-color: #0b0b0b;
 }
 
+a:link {
+  color: #ACECF7;
+}
+
+a:visited {
+  color: #ACECF7;
+}
+
 .topnav {
   background: #0b0b0b;
   overflow: hidden;
@@ -95,7 +103,7 @@ hr {
     padding-left: 10px;
     padding-right: 10px;
   }
-  
+
   .hero_title {
     font-size: 2.9em;
     padding-bottom: 20px;
@@ -141,6 +149,7 @@ hr {
 .button:hover {
   background: #2b2b2b;
   cursor: pointer;
+  text-decoration: none;
 }
 .button:hover:before {
   opacity: 0.6;
@@ -154,6 +163,7 @@ hr {
 #more_button {
   vertical-align: bottom;
   margin-bottom:40px;
+  color: #eee;
 }
 
 .main_content {
@@ -178,6 +188,7 @@ hr {
   width: 300px;
   object-fit: cover;
   overflow: hidden;
+  border-radius: 4px;
   -webkit-transition: 0.3s, filter 0.5s ease-in-out;
   transition: transform 0.3s, filter 0.5s ease-in-out;
 }
@@ -194,7 +205,7 @@ hr {
     padding-left: 0;
     text-align: center;
   }
-  
+
   .thumb {
     height: 150px;
     width: 150px;
@@ -206,7 +217,7 @@ hr {
     padding-left: 0;
     text-align: center;
   }
-  
+
   .thumb {
     height: 100px;
     width: 100px;
@@ -216,8 +227,9 @@ hr {
 .thumb:hover {
   /*-webkit-transform: scale(1.15);
   transform: scale(1.15);*/
-  -webkit-filter: grayscale(70%);
-  filter: grayscale(70%);
+  /*-webkit-filter: grayscale(70%);
+  filter: grayscale(70%);*/
+  cursor: pointer;
 }
 
 .left-thumb {
@@ -261,3 +273,83 @@ hr {
 .col-10 { width: 82.6923076923% }
 .col-11 { width: 91.3461538462% }
 .col-12 { width: 100%; margin: 0 }
+
+/* Modal - Start */
+/* The Modal (background) */
+.modal-back {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  padding-bottom: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #1b1b1b;
+  margin: auto;
+  padding: 0px 30px 30px 30px;
+  /*border: 1px solid #888;*/
+  max-width: 80%;
+  width: max-content;
+  max-height: 75%;
+  /*height: 100%;*/
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
+/* The Top Bar */
+.modal-topbar {
+  padding-top: 30px;
+  width: 100%;
+  display: block;
+  position: sticky;
+  top: 0;
+  background-color: #1b1b1b;
+  overflow: hidden;
+}
+
+/* The Title */
+.modal-title {
+  color: #eee;
+  float: left;
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* The Close Button */
+.modal-close {
+  color: #bbb;
+  float: right;
+  line-height: 18px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #eee;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal image */
+.modal-img {
+  max-width: 100%;
+  max-height: 800px;
+  object-fit: contain;
+  display: block;
+}
+/* Modal - End */
