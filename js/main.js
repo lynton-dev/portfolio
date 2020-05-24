@@ -5,15 +5,14 @@ var topnav_home = document.getElementById("topnav_home");
 
 // Get the modal
 var modal = document.getElementById("modal");
-
 // Get the <span> element that closes the modal
 var modalClose = document.getElementById("modal-close");
-
 // Get the modal title <span> element
 var modalTitle = document.getElementById("modal-title");
-
 // Get the modal image
 var modalImg = document.getElementById("modal-img");
+// Get the modal image link
+var modalImgLink = document.getElementById("modal-img-link");
 
 function home() {
   Velocity("stop");
@@ -29,6 +28,10 @@ function more() {
   Velocity(hero_footer, { opacity: 0, display: "none" }, 500);
   Velocity(main_content, { opacity: 1, display: "block" }, { delay: 500, duration: 500 });
   Velocity(topnav_home, { opacity: 1, display: "block" }, { delay: 500, duration: 500 });
+}
+
+window.onload = function () {
+  home();
 }
 
 window.onhashchange = function() {
@@ -47,36 +50,39 @@ window.onhashchange = function() {
 if (window.performance) {
   if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
     // This page is reloaded
-    Velocity("stop");
-    modal.style.display = "none";
-    modal.style.opacity = 0;
-
-    // Restore page state from url hash
-    if (window.location.hash == "") {
-      hero_main.style.display = "block";
-      hero_footer.style.display = "block";
-      main_content.style.display = "none";
-      topnav_home.style.display = "none";
-      hero_main.style.opacity = 1;
-      hero_footer.style.opacity = 1;
-      main_content.style.opacity = 0;
-      topnav_home.style.opacity = 0;
-    } else if (window.location.hash == "#my-works") {
-      hero_main.style.display = "none";
-      hero_footer.style.display = "none";
-      main_content.style.display = "block";
-      topnav_home.style.display = "block";
-      hero_main.style.opacity = 0;
-      hero_footer.style.opacity = 0;
-      main_content.style.opacity = 1;
-      topnav_home.style.opacity = 1;
-    }
+    restorePageState();
   } else if (performance.navigation.type == performance.navigation.TYPE_BACK_FORWARD) {
-    Velocity("stop");
-    modal.style.display = "none";
-    modal.style.opacity = 0;
+    // Back or forward
+    restorePageState();
   } else {
 
+  }
+}
+
+function restorePageState() {
+  // Restore page state from url hash
+  Velocity("stop");
+  modal.style.display = "none";
+  modal.style.opacity = 0;
+
+  if (window.location.hash == "") {
+    hero_main.style.display = "block";
+    hero_footer.style.display = "block";
+    main_content.style.display = "none";
+    topnav_home.style.display = "none";
+    hero_main.style.opacity = 1;
+    hero_footer.style.opacity = 1;
+    main_content.style.opacity = 0;
+    topnav_home.style.opacity = 0;
+  } else if (window.location.hash == "#my-works") {
+    hero_main.style.display = "none";
+    hero_footer.style.display = "none";
+    main_content.style.display = "block";
+    topnav_home.style.display = "block";
+    hero_main.style.opacity = 0;
+    hero_footer.style.opacity = 0;
+    main_content.style.opacity = 1;
+    topnav_home.style.opacity = 1;
   }
 }
 
@@ -85,6 +91,7 @@ function openImgModal(src, title) {
   if (modal != null && modal.style.display == "none"){
     modalTitle.innerHTML = title;
     modalImg.src = src;
+    modalImgLink.href = src;
 
     Velocity("stop");
     Velocity(modal, { opacity: 1, display: "block"} , 500);
