@@ -31,7 +31,11 @@ function more() {
 }
 
 window.onload = function () {
-  home();
+  if (window.location.hash == "") {
+    home();
+  } else if (window.location.hash == "#my-works") {
+    more();
+  }
 }
 
 window.onhashchange = function() {
