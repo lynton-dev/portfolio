@@ -33,6 +33,8 @@ function more() {
 window.onload = function () {
   if (window.location.hash == "") {
     home();
+    hero_main.style.display = "block";
+    hero_footer.style.display = "block";
   } else if (window.location.hash == "#my-works") {
     more();
   }
