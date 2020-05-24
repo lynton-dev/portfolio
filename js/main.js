@@ -1,33 +1,115 @@
-function home() {
-  var hero_main = document.getElementById("hero_main");
-  var hero_footer = document.getElementById("hero_footer");
-  var main_content = document.getElementById("main_content");
-  var topnav_home = document.getElementById("topnav_home");
+var hero_main = document.getElementById("hero_main");
+var hero_footer = document.getElementById("hero_footer");
+var main_content = document.getElementById("main_content");
+var topnav_home = document.getElementById("topnav_home");
 
+// Get the modal
+var modal = document.getElementById("modal");
+
+// Get the <span> element that closes the modal
+var modalClose = document.getElementById("modal-close");
+
+// Get the modal title <span> element
+var modalTitle = document.getElementById("modal-title");
+
+// Get the modal image
+var modalImg = document.getElementById("modal-img");
+
+function home() {
   Velocity("stop");
-  Velocity(main_content, { opacity: 0, display: "none" }, 800);
-  Velocity(topnav_home, { opacity: 0, display: "none" }, 800);
-  Velocity(hero_main, { opacity: 1, display: "block" }, { delay: 800, duration: 800 });
-  Velocity(hero_footer, { opacity: 1, display: "block" }, { delay: 800, duration: 800 });
+  Velocity(main_content, { opacity: 0, display: "none" }, 500);
+  Velocity(topnav_home, { opacity: 0, display: "none" }, 500);
+  Velocity(hero_main, { opacity: 1, display: "block" }, { delay: 500, duration: 500 });
+  Velocity(hero_footer, { opacity: 1, display: "block" }, { delay: 500, duration: 500 });
 }
 
 function more() {
-  var hero_main = document.getElementById("hero_main");
-  var hero_footer = document.getElementById("hero_footer");
-  var main_content = document.getElementById("main_content");
-  var topnav_home = document.getElementById("topnav_home");
-
   Velocity("stop");
-  Velocity(hero_main, { opacity: 0, display: "none" }, 800);
-  Velocity(hero_footer, { opacity: 0, display: "none" }, 800);
-  Velocity(main_content, { opacity: 1, display: "block" }, { delay: 800, duration: 800 });
-  Velocity(topnav_home, { opacity: 1, display: "block" }, { delay: 800, duration: 800 });
+  Velocity(hero_main, { opacity: 0, display: "none" }, 500);
+  Velocity(hero_footer, { opacity: 0, display: "none" }, 500);
+  Velocity(main_content, { opacity: 1, display: "block" }, { delay: 500, duration: 500 });
+  Velocity(topnav_home, { opacity: 1, display: "block" }, { delay: 500, duration: 500 });
 }
 
 window.onhashchange = function() {
+  Velocity("stop");
+  modal.style.display = "none";
+  modal.style.opacity = 0;
+
   if (window.location.hash == "") {
     home();
   } else if (window.location.hash == "#my-works") {
     more();
   }
 }
+
+// Check for Navigation Timing API support
+if (window.performance) {
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    // This page is reloaded
+    Velocity("stop");
+    modal.style.display = "none";
+    modal.style.opacity = 0;
+
+    // Restore page state from url hash
+    if (window.location.hash == "") {
+      hero_main.style.display = "block";
+      hero_footer.style.display = "block";
+      main_content.style.display = "none";
+      topnav_home.style.display = "none";
+      hero_main.style.opacity = 1;
+      hero_footer.style.opacity = 1;
+      main_content.style.opacity = 0;
+      topnav_home.style.opacity = 0;
+    } else if (window.location.hash == "#my-works") {
+      hero_main.style.display = "none";
+      hero_footer.style.display = "none";
+      main_content.style.display = "block";
+      topnav_home.style.display = "block";
+      hero_main.style.opacity = 0;
+      hero_footer.style.opacity = 0;
+      main_content.style.opacity = 1;
+      topnav_home.style.opacity = 1;
+    }
+  } else if (performance.navigation.type == performance.navigation.TYPE_BACK_FORWARD) {
+    Velocity("stop");
+    modal.style.display = "none";
+    modal.style.opacity = 0;
+  } else {
+
+  }
+}
+
+/* Modal functions - Start */
+function openImgModal(src, title) {
+  if (modal != null && modal.style.display == "none"){
+    modalTitle.innerHTML = title;
+    modalImg.src = src;
+
+    Velocity("stop");
+    Velocity(modal, { opacity: 1, display: "block"} , 500);
+    modal.style.display = "block";
+    modal.style.opacity = 1;
+  }
+}
+
+// When the user clicks on <span> (x), close the modal
+modalClose.onclick = function() {
+  closeModal();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+function closeModal() {
+  if (modal != null && modal.style.display != "none"){
+    Velocity("stop");
+    Velocity(modal, { opacity: 0, display: "none" }, 500);
+    //modal.style.display = "none";
+  }
+}
+/* Modal functions - End */
