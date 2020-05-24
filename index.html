@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lora&family=Saira+Condensed:wght@500&display=swap" rel="stylesheet">
-  <link href="https://css.gg/c?=|arrow-left|mail" rel="stylesheet">
+  <link href="https://css.gg/css?=|arrow-left|mail" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -13,7 +13,10 @@
     <div class="hero_title">Lynton Schoeman</div>
     <hr>
     <div class="hero_h1">Hello, I am a software engineer and creative.</div>
-    <div class="hero_h2">I develop <span style="color:#42efa4;font-weight:bold">mobile apps</span> and <span style="color:#42efa4;font-weight:bold">websites</span>.</div>
+    <div class="hero_h2">I develop <span style="color:#42efa4;font-weight:bold">mobile apps</span> and
+      <span style="color:#42efa4;font-weight:bold">websites</span>. Check out my
+      <a href="https://www.notion.so/Resume-6c49199956b04f15a1dbc75bfc8ca730" target="_blank">Resume</a>.</div>
+      <!-- target="_blank" above opens link in new tab -->
     </div>
   </div>
 
@@ -28,26 +31,40 @@
 
     <div class="row">
       <div class="col-4 left-thumb">
-        <img class="thumb" src="img/nekkorb/screenshot-homepage.png" alt="eCommerce website"/>
+        <img class="thumb" src="img/nekkorb/screenshot-homepage.png" onclick="openImgModal(this.src, this.alt)" alt="eCommerce website"/>
       </div>
       <div class="col-4 middle-thumb">
-        <img class="thumb" src="img/brewery-automation.png" alt="Brewery Automation website"/>
+        <img class="thumb" src="img/brewery-automation.png" onclick="openImgModal(this.src, this.alt)" alt="Brewery Automation website"/>
       </div>
       <div class="col-4 right-thumb">
-        <img class="thumb" src="img/app-mockups/PitchSync-mockup3.png" alt="Tuner app mockup"/>
+        <img class="thumb" src="img/app-mockups/PitchSync-mockup3.png" onclick="openImgModal(this.src, this.alt)" alt="Tuner app mockup"/>
       </div>
     </div>
 
     <div class="row">
       <div class="col-4 left-thumb">
-        <img class="thumb" src="img/nekkorb/Nekkorb-Ad.png" alt="Business Ad1"/>
+        <img class="thumb" src="img/nekkorb/Nekkorb-Ad.png" onclick="openImgModal(this.src, this.alt)" alt="Business Ad1"/>
       </div>
       <div class="col-4 middle-thumb">
-        <img class="thumb" src="img/nekkorb/Nekkorb-WePrint-Ad-2019.png" alt="Business Ad2"/>
+        <img class="thumb" src="img/nekkorb/Nekkorb-WePrint-Ad-2019.png" onclick="openImgModal(this.src, this.alt)" alt="Business Ad2"/>
       </div>
       <div class="col-4 right-thumb">
-        <img class="thumb" src="img/sculpt/SculptVoucher250.png" alt="Business Voucher"/>
+        <img class="thumb" src="img/sculpt/SculptVoucher250.png" onclick="openImgModal(this.src, this.alt)" alt="Business Voucher"/>
       </div>
+    </div>
+
+  </div>
+
+  <!-- Image Modal -->
+  <div id="modal" class="modal-back">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-topbar">
+        <span id="modal-title" class="modal-title"></span>
+        <span id="modal-close" class="modal-close">&times;</span>
+      </div>
+      <img id="modal-img" class="modal-img"/>
     </div>
 
   </div>
@@ -63,7 +80,7 @@
         <a id="more_button" href="#my-works" onclick="more()" class="button">Latest Works</a>
   </div>
 
-    <!-- Velocity.js -->
+  <!-- Velocity.js -->
   <script type="text/javascript" src="lib/velocity.min.js"></script>
 
   <script type="text/javascript" src="js/main.js"></script>
