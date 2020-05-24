@@ -11,10 +11,20 @@ body {
 
 a:link {
   color: #ACECF7;
+  text-decoration: none;
 }
 
 a:visited {
   color: #ACECF7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }
 
 .topnav {
@@ -355,3 +365,12 @@ hr {
   display: block;
 }
 /* Modal - End */
+
+/* css.gg - Start */
+.gg-external {
+    /* This value will multiple the actual size  */
+    --ggs: 0.5;
+    display: inline-block;
+    vertical-align: top;
+}
+/* css.gg - End */
