@@ -5,6 +5,8 @@ var topnav_home = document.getElementById("topnav_home");
 
 // Get the modal
 var modal = document.getElementById("modal");
+// Get the modal content container
+var modalContent = document.getElementById("modal-content");
 // Get the <span> element that closes the modal
 var modalClose = document.getElementById("modal-close");
 // Get the modal title <span> element
@@ -100,7 +102,8 @@ function openImgModal(src, title) {
     modalImgLink.href = src;
 
     Velocity("stop");
-    Velocity(modal, { opacity: 1, display: "block"} , 500);
+    // Show modal and reset scroll position to the top
+    Velocity(modal, { opacity: 1, display: "block"} , { duration: 500, begin: () => { modalContent.scrollTop = 0; } });
     modal.style.display = "block";
     modal.style.opacity = 1;
   }
