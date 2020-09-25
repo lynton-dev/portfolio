@@ -135,6 +135,30 @@ hr {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .hero_div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero_title {
+    font-size: 2.4em;
+    padding-bottom: 20px;
+  }
+
+  .hero_h1 {
+    font-size: 1.2em;
+  }
+
+  .hero_h2 {
+    font-size: 1em;
+  }
+
+  hr {
+    width: 265px;
+  }
+}
+
 .hero_footer {
   display: none;
   position: fixed;
