@@ -6,7 +6,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: #eee;
   /*padding: 0 10px;*/
-  background-color: #0b0b0b;
+  background-color: #181C26;
 }
 
 a:link {
@@ -28,7 +28,7 @@ a:active {
 }
 
 .topnav {
-  background: #0b0b0b;
+  background: #181C26;
   overflow: hidden;
   min-height: 64px;
   width: 100%;
@@ -62,8 +62,8 @@ a:active {
 }
 
 hr {
-  width: 45%;
-  border: 1px solid #2b2b2b;
+  width: 600px;
+  border: 1px solid #3D6092;
   margin: 0px;
 }
 
@@ -97,13 +97,13 @@ hr {
 
 .hero_h1 {
   margin-top: 10px;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-family: 'Inter', sans-serif;
   padding-top: 24px;
 }
 
 .hero_h2 {
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-family: 'Inter', sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -127,6 +127,10 @@ hr {
   .hero_h2 {
     font-size: 1em;
   }
+
+  hr {
+    width: 320px;
+  }
 }
 
 .hero_footer {
@@ -141,7 +145,7 @@ hr {
 
 .button {
   padding: 14px 40px;
-  border: 1px solid #3b3b3b;
+  border: 1px solid #4D87D8;
   color: white;
   text-decoration: none;
   font-size: 0.7em;
@@ -149,7 +153,7 @@ hr {
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 4px;
-  background: #0b0b0b;
+  background: #181C26;
   color: #eee;
   transition: .6s;
   overflow: hidden;
@@ -159,7 +163,7 @@ hr {
   outline: 0;
 }
 .button:hover {
-  background: #2b2b2b;
+  background: #4D87D8;
   cursor: pointer;
   text-decoration: none;
 }

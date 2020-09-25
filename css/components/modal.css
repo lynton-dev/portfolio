@@ -16,7 +16,7 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #1b1b1b;
+  background-color: #181C26;
   margin: auto;
   padding: 0px 30px 30px 30px;
   /*border: 1px solid #888;*/
@@ -37,7 +37,7 @@
   display: block;
   position: sticky;
   top: 0;
-  background-color: #1b1b1b;
+  background-color: #181C26;
   overflow: hidden;
 }
 
