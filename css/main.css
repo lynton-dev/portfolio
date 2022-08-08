@@ -64,6 +64,7 @@ a:active {
 
 .hero_div {
   min-height: 100vh;
+  padding: 44px;
   background-color: #eee;
   display: flex;
   justify-content: center;
