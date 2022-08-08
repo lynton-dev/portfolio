@@ -10,20 +10,24 @@ body {
   background-color: #181C26;
 }
 
+strong { 
+  font-weight: 800; 
+}
+
+a {
+  font-weight: 800; 
+}
 a:link {
-  color: #4c2ae4;
+  color: #333;
   text-decoration: none;
 }
-
 a:visited {
-  color: #4c2ae4;
+  color: #333;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 a:active {
   text-decoration: underline;
 }
@@ -69,22 +73,24 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
-  font-weight: bold;
 }
 
 .hero_h1 {
   font-size: 3em;
-  font-family: 'Inconsolata', monospace;
-  padding-top: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
   line-height: 1.2;
+  padding-top: 50px;
 }
 
 .hero_h2 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-family: 'Inconsolata', monospace;
-  padding-top: 20px;
-  line-height: 1.8;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  line-height: 2.5;
 }
 
 .hero_footer {
@@ -100,6 +106,57 @@ a:active {
   background-color: #181C26;
 }
 
+.button {
+  padding: 14px 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: .5s;
+  overflow: hidden;
+}
+.button:focus {
+  outline: 0;
+}
+.button:hover {
+  color: white;
+  border: 1px solid #ec5c00;
+  background: #ec5c00;
+  cursor: pointer;
+  text-decoration: none;
+}
+.button:hover:before {
+  opacity: 0.6;
+  transition: .5s;
+}
+.button:hover:after {
+  opacity: 1;
+  transition: .5s;
+}
+.button-primary {
+  border: 1px solid #ec5c00;
+  background: #eee;
+  text-decoration: none;
+}
+.button-primary:link {
+  color: #ec5c00;
+}
+.button-primary:link:hover {
+  color: #eee;
+}
+.button-secondary {
+  border: 1px solid #eee;
+  background: #eee;
+}
+.button-secondary:hover {
+  color: #333;
+  border: 1px solid #333;
+  background: #eee;
+}
+
 #footer_icon {
   color: #eee;
   text-align: center;
@@ -108,8 +165,18 @@ a:active {
   padding-right: 15px;
 }
 
+.tag {
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 300;
+  padding: 10px 25px;  /* vertical horizontal */
+  margin: 5px;
+  border-radius: 30px;
+  user-select: none;
+}
+
 /* Bootstrap icons - Start */
-.bi-box-arrow-up-right {
-    margin-bottom: 3%;
+.bi-arrow-up-right {
+    margin-bottom: 5%;
 }
 /* Bootstrap icons - End */
