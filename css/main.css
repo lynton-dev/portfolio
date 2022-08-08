@@ -64,7 +64,7 @@ a:active {
 
 .hero_div {
   min-height: 100vh;
-  padding: 44px;
+  padding: 44px 44px 128px 44px;
   background-color: #eee;
   display: flex;
   justify-content: center;
@@ -74,7 +74,6 @@ a:active {
 }
 
 .hero_h1 {
-  margin-top: 10px;
   font-size: 3em;
   font-family: 'Inconsolata', monospace;
   padding-top: 40px;
@@ -85,7 +84,6 @@ a:active {
   font-size: 1.3em;
   font-family: 'Inconsolata', monospace;
   padding-top: 20px;
-  padding-bottom: 20px;
   line-height: 1.8;
 }
 
@@ -100,7 +98,6 @@ a:active {
   justify-content: center;
   align-items: center;
   background-color: #181C26;
-  z-index: 1;
 }
 
 #footer_icon {
