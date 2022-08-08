@@ -78,7 +78,7 @@ a:active {
   font-size: 3em;
   font-family: 'Inconsolata', monospace;
   padding-top: 40px;
-  line-height: 1.8;
+  line-height: 1.2;
 }
 
 .hero_h2 {
@@ -111,11 +111,8 @@ a:active {
   padding-right: 15px;
 }
 
-/* css.gg - Start */
-.gg-external {
-    /* This value will multiple the actual size  */
-    --ggs: 0.5;
-    display: inline-block;
-    vertical-align: top;
+/* Bootstrap icons - Start */
+.bi-box-arrow-up-right {
+    margin-bottom: 3%;
 }
-/* css.gg - End */
+/* Bootstrap icons - End */
