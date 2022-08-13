@@ -150,7 +150,7 @@ a:active {
   left: 0;
   bottom: 0;
   height: 64px;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   justify-content: center;
   align-items: center;
