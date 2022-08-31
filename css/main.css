@@ -89,17 +89,10 @@ a:active {
   text-align: center;
   font-size: 1.1em;
   font-family: sans-serif;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 100px;
   line-height: 2.5;
   opacity: 80%;
-}
-
-.hero-caption {
-  font-size: 1.1em;
-  font-family: 'Inconsolata', monospace;
-  padding-bottom: 10px;
-  line-height: 2.5;
 }
 
 @media only screen and (max-width: 800px) {
@@ -116,6 +109,7 @@ a:active {
   .hero-body {
     font-size: 1.1em;
     line-height: 2;
+    padding-bottom: 80px;
   }
 }
 
@@ -213,7 +207,7 @@ a:active {
 .tags {
   display: inline-block;
   margin-top: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   text-align: center;
   width: 100%;
 }
@@ -228,6 +222,12 @@ a:active {
   border-radius: 30px;
   user-select: none;
   white-space: no-wrap;
+}
+
+@media only screen and (max-width: 800px) {
+  .tags {
+    margin-bottom: 30px;
+  }
 }
 
 .profile {
