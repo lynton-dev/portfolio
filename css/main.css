@@ -242,10 +242,9 @@ a:active {
 
 .profile {
   display: flex;
-  max-height: 100px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  max-height: 150px;
   justify-content: center;
+  background-color: white;
 }
 
 .profile-img {
